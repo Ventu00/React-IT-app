@@ -1,6 +1,7 @@
 // src/components/NewIncidentForm.js
 import React, { useState } from 'react';
 import { Form, Button } from 'react-bootstrap'; // Importamos los componentes de formularios y botones de React Bootstrap
+import '../App.css'; // Este archivo es opcional para estilos locales
 
 const NewIncidentForm = ({ onCreateIncident }) => {
     const [title, setTitle] = useState('');
@@ -58,6 +59,7 @@ const NewIncidentForm = ({ onCreateIncident }) => {
                     <Form.Label>Asignado a:</Form.Label>
                     <Form.Control type="text" value={assignedTo} onChange={(e) => setAssignedTo(e.target.value)} />
                 </Form.Group>
+                <br />
                 <Button variant="primary" type="submit">
                     Crear Incidencia
                 </Button>

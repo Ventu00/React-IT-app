@@ -22,24 +22,26 @@ const App = () => {
 
     return (
         <div className="App">
-            <Container fluid className="bg-dark text-light min-vh-100 py-4">
+            <Container fluid className=" text-light min-vh-100 py-4 appCont">
                 <h1 className="mb-4 text-white text-center">Tablero de Estado de Incidencias</h1>
                 <Row className="justify-content-md-center">
                 <Col md={5} className="custom-column-style">
-                      <div className=" newTask-container">
+                      <div className="p-3  rounded  mt-4 newTask-container">
                           <NewIncidentForm onCreateIncident={handleCreateIncident} />
                       </div>
-                      <div className="p-3 border rounded bg-light text-dark mt-4">
+                      <div className="p-3  rounded  mt-4 dashboardCont">
                           <DashboardStats incidents={incidents} />
                       </div>
+                      
                   </Col>
 
-                    <Col md={5}>
-                        <div className="p-3 border rounded bg-light text-dark">
-                            <IncidentList incidents={incidents} onUpdateStatus={handleUpdateStatus} />
-                        </div>
-                        <div className="p-3 border rounded bg-light text-dark mt-4">
+                    <Col md={5} className="custom-column-style">
+                    
+                        <div className="p-3  rounded mt-4 chartCont">
                             <BarChart incidents={incidents} />
+                        </div>
+                        <div className="p-3  rounded listCont">
+                            <IncidentList incidents={incidents} onUpdateStatus={handleUpdateStatus} />
                         </div>
                     </Col>
                 </Row>
