@@ -1,4 +1,9 @@
+/* src/index.css */
+@import '~bootstrap/dist/css/bootstrap.min.css';
+
+
 body {
+
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -10,4 +15,33 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+
+
+.custom-column-style {
+  /* Estilos personalizados para la columna */
+  padding: 20px; /* Ejemplo: ajusta el padding según sea necesario */
+  background-color: #000000; /* Ejemplo: color de fondo */
+  border: 1px solid #ced4da; /* Ejemplo: borde */
+  border-radius: 8px; /* Ejemplo: redondeo de borde */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Ejemplo: sombra */
+}
+
+.custom-column-style .newTask-container {
+  text-align: left;
+  /* Estilos para el contenedor del formulario */
+  padding: 15px; /* Ejemplo: ajusta el padding según sea necesario */
+  margin-bottom: 20px; /* Ejemplo: margen inferior */
+  border: 1px solid #ced4da; /* Ejemplo: borde */
+  background-color: #000000; /* Ejemplo: color de fondo */
+}
+
+.custom-column-style .p-3 {
+  text-align: left;
+  /* Estilos para los elementos con clase p-3 dentro de la columna */
+  border: 1px solid #ced4da; /* Ejemplo: borde */
+  border-radius: 8px; /* Ejemplo: redondeo de borde */
+  background-color: #000000; /* Ejemplo: color de fondo */
+  margin-top: 20px; /* Ejemplo: margen superior */
 }
