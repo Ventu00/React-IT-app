@@ -1,8 +1,8 @@
-// src/components/BarChart.js
+// src/components/PriorityChart.js
 import React, { useEffect, useRef } from 'react';
 import Chart from 'chart.js/auto'; // Importa Chart desde 'chart.js/auto'
 
-const BarChart = ({ incidents }) => {
+const PriorityChart = ({ incidents }) => {
     const chartRef = useRef(null); // Referencia al elemento canvas
     let myChart = null; // Variable para mantener la instancia del gráfico
 
@@ -20,23 +20,23 @@ const BarChart = ({ incidents }) => {
             myChart = new Chart(ctx, {
                 type: 'bar',
                 data: {
-                    labels: ['Abierta', 'En progreso', 'Cerrada'],
+                    labels: ['Baja', 'Media', 'Alta'],
                     datasets: [{
-                        label: 'Estado de Incidencias',
+                        label: 'Prioridad de Incidencias',
                         data: [
-                            incidents.filter(incident => incident.status === 'Abierta').length,
-                            incidents.filter(incident => incident.status === 'En progreso').length,
-                            incidents.filter(incident => incident.status === 'Cerrada').length,
+                            incidents.filter(incident => incident.priority === 'Baja').length,
+                            incidents.filter(incident => incident.priority === 'Media').length,
+                            incidents.filter(incident => incident.priority === 'Alta').length,
                         ],
                         backgroundColor: [
+                            'rgba(255, 205, 86, 0.2)',
+                            'rgba(255, 159, 64, 0.2)',
                             'rgba(255, 99, 132, 0.2)',
-                            'rgba(54, 162, 235, 0.2)',
-                            'rgba(75, 192, 192, 0.2)',
                         ],
                         borderColor: [
+                            'rgba(255, 205, 86, 1)',
+                            'rgba(255, 159, 64, 1)',
                             'rgba(255, 99, 132, 1)',
-                            'rgba(54, 162, 235, 1)',
-                            'rgba(75, 192, 192, 1)',
                         ],
                         borderWidth: 1
                     }]
@@ -64,10 +64,10 @@ const BarChart = ({ incidents }) => {
 
     return (
         <div>
-            <h2>Analisis grafico de Incidencias</h2>
+            <h2>Análisis de Prioridades de Incidencias</h2>
             <canvas ref={chartRef}></canvas>
         </div>
     );
 };
 
-export default BarChart;
+export default PriorityChart;

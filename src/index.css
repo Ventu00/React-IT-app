@@ -1,4 +1,4 @@
-/* src/index.css */
+/* src/App.css */
 @import '~bootstrap/dist/css/bootstrap.min.css';
 
 body {
@@ -20,35 +20,171 @@ code {
 }
 
 .custom-column-style {
-  /* Estilos personalizados para la columna */
-  padding: 20px; /* Ajusta el padding según sea necesario */
-  background-color: #1c1c1c00; /* Color de fondo */
-  border-radius: 8px; /* Redondeo de borde */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra */
+  margin-top: 25px !important;
+  padding: 20px;
+  background-color: #1e1e1e82;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .newTask-container, .listCont, .chartCont, .dashboardCont {
-  border: 2px solid transparent; /* Borde inicial transparente */
-  transition: border-color 0.6s ease-in-out; /* Transición suave para el cambio de color del borde */
-  padding: 15px; /* Ajusta el padding según sea necesario */
-  margin-bottom: 20px; /* Ajusta el margen inferior según sea necesario */
-  background-color: #1c1c1c; /* Color de fondo */
-  text-align: left; /* Alineación del texto */
+  border: 2px solid transparent;
+  transition: border-color 0.6s ease-in-out;
+  padding: 15px;
+  margin-bottom: 20px;
+  background-color: #1c1c1c;
+  text-align: left;
 }
 
 .newTask-container:hover, .listCont:hover, .chartCont:hover, .dashboardCont:hover {
-  border-color: #09de97; /* Cambia el borde al pasar el mouse */
+  border-color: #09de97;
 }
 
 .p-3 {
   text-align: left;
-  /* Estilos para los elementos con clase p-3 dentro de la columna */
-  border: 1px solid #156abf00; /* Ejemplo: borde */
-  border-radius: 8px; /* Redondeo de borde */
-  background-color: #1c1c1c; /* Color de fondo */
-  margin-top: 20px; /* Margen superior */
+  border: 1px solid #156abf00;
+  border-radius: 8px;
+  background-color: #1c1c1c;
+  margin-top: 20px;
+}
+
+/* Estilos personalizados para los inputs */
+.custom-input {
+  background-color: #2c2c2c;
+  color: #ffffff;
+  border-color: #09de97;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+.custom-input::placeholder {
+  color: #aaaaaa;
+}
+
+.custom-select {
+  background-color: #2c2c2c;
+  color: #ffffff;
+  border-color: #09de97;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+.custom-textarea {
+  background-color: #2c2c2c;
+  color: #ffffff;
+  border-color: #09de97;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+.form-label {
+  padding-top: 5px;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.form-container {
+  background-color: #1c1c1c;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.form-container h2 {
+  color: #ffffff;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.submit-buttons {
+  background-color: #09de97;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  color: #000000;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.submit-buttons:hover {
+  background-color: #06a57d;
 }
 
 
 
+.incident-list-container {
+  background-color: #1c1c1c;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  margin-top: 20px;
+}
 
+.incident-list-title {
+  color: #ffffff;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.incident-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.incident-item {
+  background-color: #2c2c2c;
+  padding: 15px;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.incident-details {
+  color: #ffffff;
+}
+
+.incident-title {
+  font-weight: bold;
+}
+
+.incident-status {
+  font-style: italic;
+  color: #09de97;
+}
+
+.incident-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.status-button {
+  background-color: #09de97;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  color: #000000;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.status-button:hover {
+  background-color: #06a57d;
+}
+
+.in-progress-button {
+  background-color: #f0ad4e;
+}
+
+.in-progress-button:hover {
+  background-color: #ec971f;
+}
+
+.closed-button {
+  background-color: #d9534f;
+}
+
+.closed-button:hover {
+  background-color: #c9302c;
+}
